@@ -1,4 +1,15 @@
-[x, y] = [1, 2];
+'use strict';
 
-console.log(x);
-console.log(y);
+const app = require('express')();
+
+import { ResponseController } from './controllers/response_controller';
+
+app.get('/response/:id', ResponseController.show);
+
+
+const server = app.listen(4000, () => {
+  const host = server.address().address,
+        port = server.address().port;
+
+  console.log('Example app listening at http://%s:%s', host, port);
+});

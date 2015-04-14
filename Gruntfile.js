@@ -7,23 +7,14 @@ module.exports = function(grunt) {
 
     watch: {
       jsFront: {
-        files: ['client/**/*.js'],
+        files: ['client/**/*.js', '.tmp/tags.js'],
         tasks: ['browserify:front']
-      },
-      jsBack: {
-        files: ['app/**/*.js'],
-        tasks: ['browserify:back']
       },
     },
 
     browserify: {
       options: {
-        transform: ['babelify']
-      },
-      back: {
-        files: {
-          'dist/back/main.js': 'app/main.js'
-        }
+        transform: ['babelify', 'riotify']
       },
       front: {
         files: {
@@ -32,9 +23,19 @@ module.exports = function(grunt) {
       }
     },
 
+    // riot: {
+    //   options:{
+    //     type : 'es6'
+    //   },
+    //   dist: {
+    //     src: 'client/app/tags/**/*.tag',
+    //     dest: 'client/app/tags/compiled_tags.js'
+    //   }
+    // },
+
   });
 
   grunt.registerTask('default', [
-    'browserify', 'watch'
+    'riot', 'browserify', 'watch'
   ]);
 };
