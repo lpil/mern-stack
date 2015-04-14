@@ -1,0 +1,25 @@
+{
+  "name": "mern-stack",
+  "version": "0.0.1",
+  "description": "Learning MERN",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.12.3"
+  },
+  "devDependencies": {
+    "babelify": "^6.0.2",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lpil/mern-stack.git"
+  },
+  "author": "Louis Pilfold <louis@lpil.uk>",
+  "license": ""
+}
