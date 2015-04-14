@@ -1,6 +1,8 @@
 # MERN Stack
 
-Awh yeah baby
+~~Awh yeah baby~~
+
+# Nope, wait. Riot is all globally and will break things.
 
 ### Front
 

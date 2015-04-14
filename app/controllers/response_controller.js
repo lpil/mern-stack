@@ -17,8 +17,8 @@ var data = {
 
 const ResponseController = {
   show: (req, res) => {
-    var id = req.params.response;
-    id = id + 1; // pretend we're doing something with the id
+    var id = req.params.id;
+    console.log('response id:', id);
 
     res.send(JSON.stringify(data));
   }

@@ -1,6 +1,10 @@
 'use strict';
 
-const app = require('express')();
+const express = require('express'),
+      app     = express();
+
+app.use(express.static('dist/front'));
+
 
 import { ResponseController } from './controllers/response_controller';
 

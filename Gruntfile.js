@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
     watch: {
       jsFront: {
-        files: ['client/**/*.js', '.tmp/tags.js'],
+        files: ['client/**/*.js', 'client/app/tags/**/*'],
         tasks: ['browserify:front']
       },
     },
@@ -22,16 +22,6 @@ module.exports = function(grunt) {
         }
       }
     },
-
-    // riot: {
-    //   options:{
-    //     type : 'es6'
-    //   },
-    //   dist: {
-    //     src: 'client/app/tags/**/*.tag',
-    //     dest: 'client/app/tags/compiled_tags.js'
-    //   }
-    // },
 
   });
 
